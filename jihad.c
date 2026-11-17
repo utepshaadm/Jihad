@@ -21,10 +21,10 @@ void key_setup(struct jihad_state *ctx, uint8_t *key, uint8_t *nonce) {
     ctx->S[6] = (key[24] << 24) + (key[25] << 16) + (key[26] << 8) + key[27];
     ctx->S[7] = (key[28] << 24) + (key[29] << 16) + (key[30] << 8) + key[31];
     
-    ctx->S[8] ^= (nonce[0] << 24) + (nonce[1] << 16) + (nonce[2] << 8) + nonce[3];
-    ctx->S[9] ^= (nonce[4] << 24) + (nonce[5] << 16) + (nonce[6] << 8) + nonce[7];
-    ctx->S[10] ^= (nonce[8] << 24) + (nonce[9] << 16) + (nonce[10] << 8) + nonce[11];
-    ctx->S[11] ^= (nonce[12] << 24) + (nonce[13] << 16) + (nonce[14] << 8) + nonce[15];
+    ctx->S[8] = (nonce[0] << 24) + (nonce[1] << 16) + (nonce[2] << 8) + nonce[3];
+    ctx->S[9] = (nonce[4] << 24) + (nonce[5] << 16) + (nonce[6] << 8) + nonce[7];
+    ctx->S[10] = (nonce[8] << 24) + (nonce[9] << 16) + (nonce[10] << 8) + nonce[11];
+    ctx->S[11] = (nonce[12] << 24) + (nonce[13] << 16) + (nonce[14] << 8) + nonce[15];
     
     ctx->S[12] = 0;
     ctx->S[13] = 0;
